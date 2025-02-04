@@ -12,26 +12,7 @@ var wms_layers = [];
                 url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
-var format_Plantingopportunity_1 = new ol.format.GeoJSON();
-var features_Plantingopportunity_1 = format_Plantingopportunity_1.readFeatures(json_Plantingopportunity_1, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Plantingopportunity_1 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Plantingopportunity_1.addFeatures(features_Plantingopportunity_1);
-var lyr_Plantingopportunity_1 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Plantingopportunity_1, 
-                style: style_Plantingopportunity_1,
-                popuplayertitle: "Planting opportunity",
-                interactive: true,
-    title: 'Planting opportunity<br />\
-    <img src="styles/legend/Plantingopportunity_1_0.png" /> Low<br />\
-    <img src="styles/legend/Plantingopportunity_1_1.png" /> Med Low<br />\
-    <img src="styles/legend/Plantingopportunity_1_2.png" /> Med<br />\
-    <img src="styles/legend/Plantingopportunity_1_3.png" /> Med high<br />\
-    <img src="styles/legend/Plantingopportunity_1_4.png" /> High<br />'
-        });
+        
 var format_CCFWoodlandcreation202223_2 = new ol.format.GeoJSON();
 var features_CCFWoodlandcreation202223_2 = format_CCFWoodlandcreation202223_2.readFeatures(json_CCFWoodlandcreation202223_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -76,10 +57,34 @@ var lyr_Tobeplantedin202425_4 = new ol.layer.Vector({
                 popuplayertitle: "To be planted in 2024/25",
                 interactive: true,
                 title: '<img src="styles/legend/Tobeplantedin202425_4.png" /> To be planted in 2024/25'
-            });
+            });        
+
+var format_Plantingopportunity_1 = new ol.format.GeoJSON();
+var features_Plantingopportunity_1 = format_Plantingopportunity_1.readFeatures(json_Plantingopportunity_1, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_Plantingopportunity_1 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Plantingopportunity_1.addFeatures(features_Plantingopportunity_1);
+var lyr_Plantingopportunity_1 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_Plantingopportunity_1, 
+                style: style_Plantingopportunity_1,
+                popuplayertitle: "Planting opportunity",
+                interactive: true,
+    title: 'Planting opportunity<br />\
+    <img src="styles/legend/Plantingopportunity_1_0.png" /> Low<br />\
+    <img src="styles/legend/Plantingopportunity_1_1.png" /> Med Low<br />\
+    <img src="styles/legend/Plantingopportunity_1_2.png" /> Med<br />\
+    <img src="styles/legend/Plantingopportunity_1_3.png" /> Med high<br />\
+    <img src="styles/legend/Plantingopportunity_1_4.png" /> High<br />'
+        });
+
 
 lyr_OpenStreetMap_0.setVisible(true);lyr_Plantingopportunity_1.setVisible(true);lyr_CCFWoodlandcreation202223_2.setVisible(true);lyr_CCFWoodlandcreation202324_3.setVisible(true);lyr_Tobeplantedin202425_4.setVisible(true);
+
 var layersList = [lyr_OpenStreetMap_0,lyr_Plantingopportunity_1,lyr_CCFWoodlandcreation202223_2,lyr_CCFWoodlandcreation202324_3,lyr_Tobeplantedin202425_4];
+
 lyr_Plantingopportunity_1.set('fieldAliases', {'fid': 'fid', 'existing_woodland': 'existing_woodland', 'railway_footprints': 'railway_footprints', 'roads_national': 'roads_national', 'roads_local': 'roads_local', 'roads_regional': 'roads_regional', 'surface_water': 'surface_water', 'buildings': 'buildings', 'gas_transmission': 'gas_transmission', 'non_woodland_ph': 'non_woodland_ph', 'wfc_housing_allocations': 'wfc_housing_allocations', 'scheduled_monuments': 'scheduled_monuments', 'ldnpa_housing_allocations': 'ldnpa_housing_allocations', 'watercourses': 'watercourses', 'electricity_transmission': 'electricity_transmission', 'not_cumbria': 'not_cumbria', 'outside_ccf': 'outside_ccf', 'above_500m_elevation': 'above_500m_elevation', 'ancient_woodland_connectivity': 'ancient_woodland_connectivity', 'economic_deprivation': 'economic_deprivation', 'fifteen_minute_standard': 'fifteen_minute_standard', 'flood_zone_2': 'flood_zone_2', 'poor_air_quality': 'poor_air_quality', 'public_health_deprivation': 'public_health_deprivation', 'woodland_access_standard': 'woodland_access_standard', 'woodland_connectivity': 'woodland_connectivity', 'wood_pasture_connectivity': 'wood_pasture_connectivity', 'deep_peat_soils_ne': 'deep_peat_soils_ne', 'high_water_buffer': 'high_water_buffer', 'riparian_zone': 'riparian_zone', 'mask': 'mask', 'opp_score': 'opp_score', 'total_area': 'total_area', 'ex_wood': 'Existing woodland', 'railway': 'Railway footprints', 'roads': 'Roads', 'water': 'Surface water', 'built': 'Buildings', 'pri_hab': 'Priority habitats', 'hous_alloc': 'Housing allocations', 'sam': 'Scheduled monuments', 'watercourse': 'Watercourses', 'electricity': 'Electricity transmission', 'not_ccf': 'Outside CCF footprint', 'above_500m': 'Above 500m elevation', 'w_connect': 'Woodland connectivity', 'economic': 'Economic deprivation', 'fifteen_minute': 'Fifteen minute standard', 'floodplain': 'Floodplain woodland potential', 'air_quality': 'Poor air quality', 'public_health': 'Public health deprivation', 'access_standard': 'Woodland access standard', 'aw_connect': 'Ancient woodland enhancement', 'wp_connect': 'Wood pasture enhancement', 'deep_peat': 'Deep peat soils', 'riparian': 'Riparian zone', 'pl_area': 'Plantable area', });
 lyr_CCFWoodlandcreation202223_2.set('fieldAliases', {'fid': 'fid', 'SITE_ID': 'SITE_ID', 'Name': 'Site name', 'Gross Area (ha)': 'Gross area (ha)', 'Net Area (ha)': 'Net area (ha)', 'Access': 'Access', 'Planting type': 'Planting type', 'Trees Planted': 'Trees planted', 'metres hedgerow': 'Hedgerow metres', });
 lyr_CCFWoodlandcreation202324_3.set('fieldAliases', {'fid': 'fid', 'SITE_ID': 'SITE_ID', 'Name': 'Site name', 'Gross Area (ha)': 'Gross area (ha)', 'Net Area (ha)': 'Net area (ha)', 'Access': 'Access', 'Planting type': 'Planting type', 'Trees Planted': 'Trees planted', 'metres hedgerow': 'Hedgerow metres', });

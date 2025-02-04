@@ -21,7 +21,7 @@ var style_Tobeplantedin202425_4 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 4.0 + size,
+        image: new ol.style.Circle({radius: 6.0 + size,
             stroke: new ol.style.Stroke({color: 'rgba(110,0,236,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(128,1,255,0.5019607843137255)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
