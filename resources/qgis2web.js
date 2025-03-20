@@ -196,6 +196,10 @@ function createPopupField(currentFeature, currentFeatureKeys, layer) {
             if (layer.get('fieldImages')[currentFeatureKeys[i]] == "Hex") {
                 popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/hex_' + currentFeature.get(currentFeatureKeys[i]).toLocaleString() + '.png" height="300"/></td>' :
                  '');
+            }
+            if (layer.get('fieldImages')[currentFeatureKeys[i]] == "Photo") {
+                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).toLocaleString() + '.png" height="200"/></td>' :
+                 '');
             } else {
                 if (layer.get('fieldImages')[currentFeatureKeys[i]] == "ExternalResource") {
                      popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).toLocaleString() + '.png" height="10"/></td>' : '');
