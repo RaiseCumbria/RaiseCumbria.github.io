@@ -1,28 +1,28 @@
 var size = 0;
 var placement = 'point';
 
-var style_Tobeplantedin202425_4 = function(feature, resolution){
+var style_CCFWoodlandcreation202526_4 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
     };
-    var value = ""
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'point';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 6.0 + size,
-            stroke: new ol.style.Stroke({color: 'rgba(110,0,236,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(128,1,255,0.5019607843137255)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(0,126,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(58,155,255,0.5019607843137255)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
